@@ -1,0 +1,19 @@
+{
+    # пытается на :80 запуститься, можно и с ним, но нужен root
+	auto_https off
+}
+
+https://:8441 {
+	tls certificates/1.pem certificates/1.key
+	respond "ok"
+}
+
+https://:8442 {
+	tls certificates/2.pem certificates/2.key
+	respond "ok"
+}
+
+https://:8443 {
+	tls certificates/3.pem certificates/3.key
+	respond "ok"
+}
